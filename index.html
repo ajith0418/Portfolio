@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajith's Portfolio Website</title>
+    <link rel="stylesheet" href="stylelinkedin.css">
+    <script src="https://kit.fontawesome.com/bfea563190.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="header">
+    
+    <div class="container">
+        <nav> 
+            <img src="img/logo.png" class="logo">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Full Stack Developer</p>
+            <h1>Hi, this is <span>Ajith</span> from texas, building<br> scalable and innovatuve web solutions!</h1>
+        </div>
+
+    </div>
+</div>
+<!--------------------------about------------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Ajith, a passionate Java Full Stack Developer with over 4 plus years
+                    of experience in building scalable web applications. I specialize in Java, 
+                    Spring Boot, Microservices, and cloud platforms like AWS & Azure. 
+                    With expertise in front-end technologies like Angular and React, I create 
+                    dynamic and user-friendly applications. I love solving complex problems and 
+                    integrating AI models into production systems.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Java, JavaScript, TypeScript, SQL, Python</li>
+                            <li><span>Front-end Frameworks</span><br>Angular, React, Vue.js</li>
+                            <li><span>Cloud platforms</span><br>AWS, Azure, GCP</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Java Full Stack Developer</span><br>FedEx Corporation - USA (2024 - Present)</li>
+                            <li><span>Java Full Stack Developer </span><br>Star Health Allied Insurance - INDIA (2021-22)</li>
+                            <li><span>Software Engineer</span><br>Infosys Limited - INDIA (2018 - 21)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>University of North Texas</span><br>Master's In Information Systems and technology</li>
+                            <li><span>S R University</span><br>Bachelor's of Technology</li>
+                        </ul>
+                    </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--------------------------contact------------------------>
+
+
+<div id="contact">
+    <div class="content">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>sainaidu.dev04@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+1 940-843-8549</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sanaidudev/"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/sanaidudev/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/sanaidudev/"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/sanaidudev/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i>2025 Ajith Sai Naidu Palla. All rights reserved</p>
+        </div>
+    </div>
+
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+</script>
+</body>
+</html>
